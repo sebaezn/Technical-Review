@@ -4,7 +4,11 @@ import HeroImage from './components/HeroImage'
 import Card from './components/Card'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [selectedCard, setSelectedCard] = useState(1); // Initially set the middle card
+
+  const handleCardClick = (index) => {
+    setSelectedCard(index);
+  };
 
   return (
     <>
@@ -17,6 +21,8 @@ function App() {
 "
             imageAlt="Premium automotive services"
             buttonText="Button 1"
+            className={selectedCard === 0 ? 'border-5 border-blue-500' : ''}
+            onClick={() => handleCardClick(0)}
           />
           <Card 
             title="Heading 2"
@@ -24,12 +30,21 @@ function App() {
 "
             imageAlt="Expert car maintenance"
             buttonText="Button 2"
+            className={selectedCard === 1 ? 'border-5 border-blue-500' : ''}
+            onClick={() => handleCardClick(1)}
           />
           <Card 
             title="Heading 3"
-            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris."
+            content={
+              <>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+                <p className="mt-3"> incididunt ut eiusmod tempor incididunt ut labore et dolore magna Aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+              </>
+            }
             imageAlt="Quality automotive parts"
             buttonText="Button 3"
+            className={selectedCard === 2 ? 'border-5 border-blue-500' : ''}
+            onClick={() => handleCardClick(2)}
           />
         </div>
       </div>

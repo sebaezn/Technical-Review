@@ -1,5 +1,6 @@
 import React from 'react'
 
+// Reusable button component with hover effects and customizable text
 const CarButton = ({ text = "Learn More", onClick, className = "" }) => {
   return (
     <div className="mt-auto">

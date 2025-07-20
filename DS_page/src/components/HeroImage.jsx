@@ -18,7 +18,7 @@ const HeroImage = (props) => {
 
       {/* Content Overlay */}
       <div className="absolute inset-x-0 bottom-8 flex flex-col items-center px-4 z-10">
-        <h1 className="text-white text-4xl font-bold mb-10 text-center">
+        <h1 className="text-white text-4xl md:text-3xl sm:text-2xl font-bold mb-10 md:mb-8 sm:mb-6 text-center">
           Welcome to G Automotive
         </h1>
         <p className="text-white text-lg max-w-5xl text-center mb-8">

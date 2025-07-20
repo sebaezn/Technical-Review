@@ -1,6 +1,7 @@
 import React from 'react'
 import Card from './Card'
 
+// Demo component showcasing different card configurations
 const CardExample = () => {
   const handleButtonClick = () => {
     alert('Button clicked!')
