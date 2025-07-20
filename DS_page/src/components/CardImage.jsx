@@ -1,15 +1,15 @@
 import React from 'react'
 import CardImageSrc from '../assets/CardImage.jpg';
 
-const CardImage = () => {
+const CardImage = ({ alt = "Card" }) => {
   return (
-    <div>
+    <div className="card-image">
       <img
         src={CardImageSrc}
-        alt="Card"
-        className=""
-        CardImage />
-      </div>
+        alt={alt}
+        className="card-img"
+      />
+    </div>
   )
 }
 

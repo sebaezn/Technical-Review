@@ -1,8 +1,10 @@
 import React from 'react'
 
-const CarHeader = () => {
+const CarHeader = ({ title = "Card Title" }) => {
   return (
-    <div>CarHeader</div>
+    <div className="card-header mb-3">
+      <h3 className="text-xl font-bold text-gray-800">{title}</h3>
+    </div>
   )
 }
 
